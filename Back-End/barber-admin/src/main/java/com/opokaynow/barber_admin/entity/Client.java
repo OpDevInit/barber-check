@@ -1,6 +1,9 @@
 package com.opokaynow.barber_admin.entity;
 
+import java.time.LocalDateTime;
 import java.util.TimeZone;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -15,8 +18,12 @@ public class Client {
     private Long id;
     private String name;
     private boolean beards;
-    private boolean cut;
+    private boolean hair;
+    private boolean localHomeCut;
+    private boolean localDeliveryCut;
     private String typeCut;
     private String tel;
-    private TimeZone hourCut;
+    @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss")
+    private LocalDateTime dateTime;
+    private String paymentMethod;
 }

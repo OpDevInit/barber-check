@@ -27,16 +27,13 @@ public class Cliente {
     private Long id;
     private String name;
     private boolean beards;
-    private boolean cut;
-    private boolean localhomeCut;
+    private boolean hair;
+    private boolean localHomeCut;
     private boolean localDeliveryCut;
     private String typeCut;
     private String tel;
     @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss")
     private LocalDateTime dateTime;
-    private String messageConfirm;
-    
-    
-    
+    private String paymentMethod;
 
 }

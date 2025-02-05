@@ -23,17 +23,19 @@ public class ClientServices {
 
     public String saveClientCut(Cliente client) {
         
+        
+        String messageConfirm;
         DateTimeFormatter formater = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
 
         if (client.isLocalDeliveryCut() == true) {
-            client.setMessageConfirm("Seu corte foi marcado! O barbeiro chegará até "
-                    + client.getDateTime().plusHours(1).plusMinutes(30).format(formater));
+            messageConfirm = "Seu corte foi marcado! O barbeiro chegará até "
+                    + client.getDateTime().plusHours(1).plusMinutes(30).format(formater);
         } else {
-            client.setMessageConfirm("Seu corte foi marcado!! Compareça na rua Rua Viana do Castelo, 288 às "
-                    + client.getDateTime().format(formater));
+            messageConfirm = "Seu corte foi marcado!! Compareça na rua Rua Viana do Castelo, 288 às "
+                    + client.getDateTime().format(formater);
         }
         repository.save(client);
-        return client.getMessageConfirm();
+        return messageConfirm;
     }
 
 }

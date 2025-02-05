@@ -12,6 +12,6 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Barber {
-    private String name;
-    private List<Client> listClients;  
+    private String login;
+    private String password;
 }

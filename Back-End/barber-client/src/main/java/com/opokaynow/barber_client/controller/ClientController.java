@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 @RequestMapping("/")
-public class ClientCotnroller {
+public class ClientController {
 
     @Autowired
     ClientServices services;
